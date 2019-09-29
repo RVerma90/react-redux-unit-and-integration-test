@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class SharedButton extends Component {
 
-  submitEvent() {
+  submitEvent = () => {
     if(this.props.emitEvent) {
       this.props.emitEvent();
     }
@@ -14,7 +14,7 @@ class SharedButton extends Component {
     const { buttonText } = this.props;
 
     return(
-      <button onClick={() => this.submitEvent()} data-test="buttonComponent">
+      <button onClick={this.submitEvent()} data-test="buttonComponent">
         {buttonText}
       </button>
     );   
